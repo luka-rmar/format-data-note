@@ -2,9 +2,6 @@ const fieldNote = document.getElementById("note")
 const fieldSeries = document.getElementById("series")
 const keyNote = document.getElementById("key_note")
 
-const resultdNote = document.getElementById("result_note")
-const resultSeries = document.getElementById("result_series")
-const resutulKey = document.getElementById("result_key")
 
 const restulCoillection = document.getElementsByClassName("field_result")
 
