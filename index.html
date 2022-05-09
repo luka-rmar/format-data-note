@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formatação</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+        <div class="title">
+         <span>Formatar dados</span>
+        </div>
+
+       <div class="content">
+         <div class="box_field">
+          <div class="field">
+            <label for="note">Número da nota</label>
+            <input type="text" name="note" id="note"/>
+          </div>
+          <div class="field">
+            <label for="series">Número de série</label>
+            <input type="text" name="series" id="series"/>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="key_note">Chave da nota</label>
+          <input type="text" name="key_note" id="key_note"/>
+        </div>
+       </div>
+       <div class="box_button_generate">
+        <button id="button_generate" onclick="fomartingData()">Gerar</button>
+      </div>
+    </div>
+      <div class="box_result">
+        <div class="field_result">
+         <span>
+           Número da nota
+           <div class="tooltip">
+            <button onclick="copyClipboard('result_note', 'tooltip_note')" onmouseout="outCopyClipboard('tooltip_note')">
+              <span class="tooltiptext" id="tooltip_note">
+                Copiar área de transferência
+              </span>
+              copiar
+            </button>
+          </div>
+         </span>
+         <input id="result_note" readonly/>
+        </div>
+        <div class="field_result">
+         <span>
+           Número de série 
+           <div class="tooltip">
+            <button onclick="copyClipboard('result_series', 'tooltip_series')" onmouseout="outCopyClipboard('tooltip_series')">
+              <span class="tooltiptext" id="tooltip_series">
+                Copiar área de transferência
+              </span>
+              copiar
+            </button>
+          </div>
+          </span>
+         <input id="result_series" readonly/>
+        </div>
+        <div class="field_result">
+         <span>
+           Chave da nota 
+           <div class="tooltip">
+            <button onclick="copyClipboard('result_key', 'tooltip_key')" onmouseout="outCopyClipboard('tooltip_key')">
+              <span class="tooltiptext" id="tooltip_key">
+                Copiar área de transferência
+              </span>
+              copiar
+            </button>
+          </div>
+          </span>
+         <input id="result_key" readonly />
+        </div>
+      </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
